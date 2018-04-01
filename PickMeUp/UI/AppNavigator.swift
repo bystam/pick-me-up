@@ -13,7 +13,7 @@ final class AppNavigator {
     }
 
     func setupWindowContent() {
-        window.rootViewController = ViewController.create()
+        window.rootViewController = MainViewController.create()
     }
 
 }

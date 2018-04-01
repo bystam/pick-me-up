@@ -7,13 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB016D7C2071512700505723 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB016D7B2071512700505723 /* MainViewModel.swift */; };
+		DB016D802071520D00505723 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DBECBF7E2070E7AB00EEBD32 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DB43F8862070D7BA008CFB7C /* libFrallware.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB43F8822070D799008CFB7C /* libFrallware.a */; };
 		DB43F89B2070D9D1008CFB7C /* libFrallware.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB43F8822070D799008CFB7C /* libFrallware.a */; };
 		DB43F89D2070DA42008CFB7C /* AppServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB43F8992070D9BE008CFB7C /* AppServices.swift */; };
 		DB43F89E2070DA80008CFB7C /* libServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB43F8902070D9A9008CFB7C /* libServices.a */; };
+		DB51D2A320714B060090C853 /* URLImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51D2A220714B060090C853 /* URLImageRepository.swift */; };
+		DB51D2A620714B220090C853 /* RedditAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51D2A520714B220090C853 /* RedditAPI.swift */; };
 		DB841F812070DB7E004D4748 /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB841F802070DB7E004D4748 /* AppNavigator.swift */; };
+		DBECBF7C2070E79200EEBD32 /* Frallware+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBECBF7B2070E79200EEBD32 /* Frallware+Rx.swift */; };
+		DBECBF7F2070E7AB00EEBD32 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBECBF7E2070E7AB00EEBD32 /* RxSwift.framework */; };
+		DBECBF80207146B800EEBD32 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBECBF7E2070E7AB00EEBD32 /* RxSwift.framework */; };
+		DBECBF81207146BE00EEBD32 /* RxSwift.framework in Resources */ = {isa = PBXBuildFile; fileRef = DBECBF7E2070E7AB00EEBD32 /* RxSwift.framework */; };
 		DBFD1CFD2070D546004B4AB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD1CFC2070D546004B4AB2 /* AppDelegate.swift */; };
-		DBFD1CFF2070D546004B4AB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD1CFE2070D546004B4AB2 /* ViewController.swift */; };
+		DBFD1CFF2070D546004B4AB2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD1CFE2070D546004B4AB2 /* MainViewController.swift */; };
 		DBFD1D022070D546004B4AB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBFD1D002070D546004B4AB2 /* Main.storyboard */; };
 		DBFD1D042070D546004B4AB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBFD1D032070D546004B4AB2 /* Assets.xcassets */; };
 		DBFD1D072070D546004B4AB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBFD1D052070D546004B4AB2 /* LaunchScreen.storyboard */; };
@@ -37,6 +45,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		DB016D812071520D00505723 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DB016D802071520D00505723 /* RxSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DB43F88E2070D9A9008CFB7C /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -49,13 +68,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DB016D7B2071512700505723 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		DB43F87C2070D799008CFB7C /* Frallware.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Frallware.xcodeproj; sourceTree = "<group>"; };
 		DB43F8902070D9A9008CFB7C /* libServices.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libServices.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB43F8992070D9BE008CFB7C /* AppServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServices.swift; sourceTree = "<group>"; };
+		DB51D2A220714B060090C853 /* URLImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageRepository.swift; sourceTree = "<group>"; };
+		DB51D2A520714B220090C853 /* RedditAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditAPI.swift; sourceTree = "<group>"; };
 		DB841F802070DB7E004D4748 /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
+		DBECBF7B2070E79200EEBD32 /* Frallware+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Frallware+Rx.swift"; sourceTree = "<group>"; };
+		DBECBF7E2070E7AB00EEBD32 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxSwift.framework; sourceTree = "<group>"; };
 		DBFD1CF92070D546004B4AB2 /* PickMeUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickMeUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBFD1CFC2070D546004B4AB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DBFD1CFE2070D546004B4AB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DBFD1CFE2070D546004B4AB2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		DBFD1D012070D546004B4AB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DBFD1D032070D546004B4AB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBFD1D062070D546004B4AB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -67,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBECBF7F2070E7AB00EEBD32 /* RxSwift.framework in Frameworks */,
 				DB43F89B2070D9D1008CFB7C /* libFrallware.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,6 +102,7 @@
 			files = (
 				DB43F89E2070DA80008CFB7C /* libServices.a in Frameworks */,
 				DB43F8862070D7BA008CFB7C /* libFrallware.a in Frameworks */,
+				DBECBF80207146B800EEBD32 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +112,7 @@
 		DB43F8362070D723008CFB7C /* External */ = {
 			isa = PBXGroup;
 			children = (
+				DBECBF7D2070E79C00EEBD32 /* RxSwift */,
 				DB43F87B2070D78A008CFB7C /* frallware */,
 			);
 			path = External;
@@ -119,6 +146,9 @@
 			isa = PBXGroup;
 			children = (
 				DB43F8992070D9BE008CFB7C /* AppServices.swift */,
+				DB51D2A420714B170090C853 /* Reddit API */,
+				DB51D29F20714AD60090C853 /* URL Image Repository */,
+				DBECBF7A2070E78300EEBD32 /* Utils */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -142,13 +172,46 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		DB51D29F20714AD60090C853 /* URL Image Repository */ = {
+			isa = PBXGroup;
+			children = (
+				DB51D2A220714B060090C853 /* URLImageRepository.swift */,
+			);
+			path = "URL Image Repository";
+			sourceTree = "<group>";
+		};
+		DB51D2A420714B170090C853 /* Reddit API */ = {
+			isa = PBXGroup;
+			children = (
+				DB51D2A520714B220090C853 /* RedditAPI.swift */,
+			);
+			path = "Reddit API";
+			sourceTree = "<group>";
+		};
 		DB841F822070DBD9004D4748 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				DBFD1CFE2070D546004B4AB2 /* ViewController.swift */,
+				DB016D7B2071512700505723 /* MainViewModel.swift */,
+				DBFD1CFE2070D546004B4AB2 /* MainViewController.swift */,
 				DBFD1D002070D546004B4AB2 /* Main.storyboard */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		DBECBF7A2070E78300EEBD32 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DBECBF7B2070E79200EEBD32 /* Frallware+Rx.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		DBECBF7D2070E79C00EEBD32 /* RxSwift */ = {
+			isa = PBXGroup;
+			children = (
+				DBECBF7E2070E7AB00EEBD32 /* RxSwift.framework */,
+			);
+			path = RxSwift;
 			sourceTree = "<group>";
 		};
 		DBFD1CF02070D545004B4AB2 = {
@@ -208,6 +271,7 @@
 				DBFD1CF52070D546004B4AB2 /* Sources */,
 				DBFD1CF62070D546004B4AB2 /* Frameworks */,
 				DBFD1CF72070D546004B4AB2 /* Resources */,
+				DB016D812071520D00505723 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -285,6 +349,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBECBF81207146BE00EEBD32 /* RxSwift.framework in Resources */,
 				DBFD1D072070D546004B4AB2 /* LaunchScreen.storyboard in Resources */,
 				DBFD1D042070D546004B4AB2 /* Assets.xcassets in Resources */,
 				DBFD1D022070D546004B4AB2 /* Main.storyboard in Resources */,
@@ -298,6 +363,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB51D2A620714B220090C853 /* RedditAPI.swift in Sources */,
+				DBECBF7C2070E79200EEBD32 /* Frallware+Rx.swift in Sources */,
+				DB51D2A320714B060090C853 /* URLImageRepository.swift in Sources */,
 				DB43F89D2070DA42008CFB7C /* AppServices.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,9 +374,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBFD1CFF2070D546004B4AB2 /* ViewController.swift in Sources */,
+				DBFD1CFF2070D546004B4AB2 /* MainViewController.swift in Sources */,
 				DBFD1CFD2070D546004B4AB2 /* AppDelegate.swift in Sources */,
 				DB841F812070DB7E004D4748 /* AppNavigator.swift in Sources */,
+				DB016D7C2071512700505723 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +407,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/External/RxSwift",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -350,6 +423,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/External/RxSwift",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -474,6 +551,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/External/RxSwift",
+				);
 				INFOPLIST_FILE = PickMeUp/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.frallware.PickMeUp;
@@ -488,6 +569,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/External/RxSwift",
+				);
 				INFOPLIST_FILE = PickMeUp/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.frallware.PickMeUp;

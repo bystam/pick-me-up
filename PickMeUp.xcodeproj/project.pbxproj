@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DB016D7C2071512700505723 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB016D7B2071512700505723 /* MainViewModel.swift */; };
 		DB016D802071520D00505723 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DBECBF7E2070E7AB00EEBD32 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DB016D832071804C00505723 /* URLImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB016D822071804C00505723 /* URLImageModel.swift */; };
 		DB43F8862070D7BA008CFB7C /* libFrallware.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB43F8822070D799008CFB7C /* libFrallware.a */; };
 		DB43F89B2070D9D1008CFB7C /* libFrallware.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB43F8822070D799008CFB7C /* libFrallware.a */; };
 		DB43F89D2070DA42008CFB7C /* AppServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB43F8992070D9BE008CFB7C /* AppServices.swift */; };
@@ -69,6 +70,7 @@
 
 /* Begin PBXFileReference section */
 		DB016D7B2071512700505723 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		DB016D822071804C00505723 /* URLImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageModel.swift; sourceTree = "<group>"; };
 		DB43F87C2070D799008CFB7C /* Frallware.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Frallware.xcodeproj; sourceTree = "<group>"; };
 		DB43F8902070D9A9008CFB7C /* libServices.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libServices.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB43F8992070D9BE008CFB7C /* AppServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServices.swift; sourceTree = "<group>"; };
@@ -146,8 +148,8 @@
 			isa = PBXGroup;
 			children = (
 				DB43F8992070D9BE008CFB7C /* AppServices.swift */,
-				DB51D2A420714B170090C853 /* Reddit API */,
-				DB51D29F20714AD60090C853 /* URL Image Repository */,
+				DB51D2A420714B170090C853 /* RedditAPI */,
+				DB51D29F20714AD60090C853 /* URLImageRepository */,
 				DBECBF7A2070E78300EEBD32 /* Utils */,
 			);
 			path = Services;
@@ -172,20 +174,21 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		DB51D29F20714AD60090C853 /* URL Image Repository */ = {
+		DB51D29F20714AD60090C853 /* URLImageRepository */ = {
 			isa = PBXGroup;
 			children = (
+				DB016D822071804C00505723 /* URLImageModel.swift */,
 				DB51D2A220714B060090C853 /* URLImageRepository.swift */,
 			);
-			path = "URL Image Repository";
+			path = URLImageRepository;
 			sourceTree = "<group>";
 		};
-		DB51D2A420714B170090C853 /* Reddit API */ = {
+		DB51D2A420714B170090C853 /* RedditAPI */ = {
 			isa = PBXGroup;
 			children = (
 				DB51D2A520714B220090C853 /* RedditAPI.swift */,
 			);
-			path = "Reddit API";
+			path = RedditAPI;
 			sourceTree = "<group>";
 		};
 		DB841F822070DBD9004D4748 /* Main */ = {
@@ -367,6 +370,7 @@
 				DBECBF7C2070E79200EEBD32 /* Frallware+Rx.swift in Sources */,
 				DB51D2A320714B060090C853 /* URLImageRepository.swift in Sources */,
 				DB43F89D2070DA42008CFB7C /* AppServices.swift in Sources */,
+				DB016D832071804C00505723 /* URLImageModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

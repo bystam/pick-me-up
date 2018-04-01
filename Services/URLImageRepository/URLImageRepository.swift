@@ -36,3 +36,8 @@ public class _URLImageRepository: URLImageRepository {
             .reduce([URL](), accumulator: +)
     }
 }
+
+private extension ListingsCall.Child {
+
+
+}

@@ -3,8 +3,11 @@
 //
 
 import UIKit
+import Frallware
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, StoryboardBased {
+
+    static let storyboardName: String = "Main"
 
     override func viewDidLoad() {
         super.viewDidLoad()

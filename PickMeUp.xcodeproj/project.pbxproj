@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		DB43F8862070D7BA008CFB7C /* libFrallware.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB43F8822070D799008CFB7C /* libFrallware.a */; };
+		DB43F89B2070D9D1008CFB7C /* libFrallware.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB43F8822070D799008CFB7C /* libFrallware.a */; };
+		DB43F89D2070DA42008CFB7C /* AppServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB43F8992070D9BE008CFB7C /* AppServices.swift */; };
+		DB43F89E2070DA80008CFB7C /* libServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB43F8902070D9A9008CFB7C /* libServices.a */; };
+		DB841F812070DB7E004D4748 /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB841F802070DB7E004D4748 /* AppNavigator.swift */; };
 		DBFD1CFD2070D546004B4AB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD1CFC2070D546004B4AB2 /* AppDelegate.swift */; };
 		DBFD1CFF2070D546004B4AB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD1CFE2070D546004B4AB2 /* ViewController.swift */; };
 		DBFD1D022070D546004B4AB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBFD1D002070D546004B4AB2 /* Main.storyboard */; };
@@ -32,8 +36,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		DB43F88E2070D9A9008CFB7C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		DB43F87C2070D799008CFB7C /* Frallware.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Frallware.xcodeproj; sourceTree = "<group>"; };
+		DB43F8902070D9A9008CFB7C /* libServices.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libServices.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB43F8992070D9BE008CFB7C /* AppServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServices.swift; sourceTree = "<group>"; };
+		DB841F802070DB7E004D4748 /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
 		DBFD1CF92070D546004B4AB2 /* PickMeUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickMeUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBFD1CFC2070D546004B4AB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBFD1CFE2070D546004B4AB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,10 +63,19 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		DB43F88D2070D9A9008CFB7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB43F89B2070D9D1008CFB7C /* libFrallware.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DBFD1CF62070D546004B4AB2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB43F89E2070DA80008CFB7C /* libServices.a in Frameworks */,
 				DB43F8862070D7BA008CFB7C /* libFrallware.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,10 +115,47 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DB43F8882070D975008CFB7C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DB43F8992070D9BE008CFB7C /* AppServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DB43F88B2070D97A008CFB7C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				DB841F802070DB7E004D4748 /* AppNavigator.swift */,
+				DB841F822070DBD9004D4748 /* Main */,
+				DBFD1D032070D546004B4AB2 /* Assets.xcassets */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		DB43F89C2070D9F5008CFB7C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DBFD1D052070D546004B4AB2 /* LaunchScreen.storyboard */,
+				DBFD1D082070D546004B4AB2 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DB841F822070DBD9004D4748 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				DBFD1CFE2070D546004B4AB2 /* ViewController.swift */,
+				DBFD1D002070D546004B4AB2 /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		DBFD1CF02070D545004B4AB2 = {
 			isa = PBXGroup;
 			children = (
 				DBFD1CFB2070D546004B4AB2 /* PickMeUp */,
+				DB43F8882070D975008CFB7C /* Services */,
 				DB43F8362070D723008CFB7C /* External */,
 				DBFD1CFA2070D546004B4AB2 /* Products */,
 				DB43F8852070D7BA008CFB7C /* Frameworks */,
@@ -101,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				DBFD1CF92070D546004B4AB2 /* PickMeUp.app */,
+				DB43F8902070D9A9008CFB7C /* libServices.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -109,11 +175,8 @@
 			isa = PBXGroup;
 			children = (
 				DBFD1CFC2070D546004B4AB2 /* AppDelegate.swift */,
-				DBFD1CFE2070D546004B4AB2 /* ViewController.swift */,
-				DBFD1D002070D546004B4AB2 /* Main.storyboard */,
-				DBFD1D032070D546004B4AB2 /* Assets.xcassets */,
-				DBFD1D052070D546004B4AB2 /* LaunchScreen.storyboard */,
-				DBFD1D082070D546004B4AB2 /* Info.plist */,
+				DB43F88B2070D97A008CFB7C /* UI */,
+				DB43F89C2070D9F5008CFB7C /* Resources */,
 			);
 			path = PickMeUp;
 			sourceTree = "<group>";
@@ -121,6 +184,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		DB43F88F2070D9A9008CFB7C /* Services */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB43F8962070D9A9008CFB7C /* Build configuration list for PBXNativeTarget "Services" */;
+			buildPhases = (
+				DB43F88C2070D9A9008CFB7C /* Sources */,
+				DB43F88D2070D9A9008CFB7C /* Frameworks */,
+				DB43F88E2070D9A9008CFB7C /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Services;
+			productName = Services;
+			productReference = DB43F8902070D9A9008CFB7C /* libServices.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		DBFD1CF82070D546004B4AB2 /* PickMeUp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DBFD1D162070D546004B4AB2 /* Build configuration list for PBXNativeTarget "PickMeUp" */;
@@ -148,6 +228,10 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = Frallware;
 				TargetAttributes = {
+					DB43F88F2070D9A9008CFB7C = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 					DBFD1CF82070D546004B4AB2 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -174,6 +258,7 @@
 			projectRoot = "";
 			targets = (
 				DBFD1CF82070D546004B4AB2 /* PickMeUp */,
+				DB43F88F2070D9A9008CFB7C /* Services */,
 			);
 		};
 /* End PBXProject section */
@@ -209,12 +294,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		DB43F88C2070D9A9008CFB7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB43F89D2070DA42008CFB7C /* AppServices.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DBFD1CF52070D546004B4AB2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				DBFD1CFF2070D546004B4AB2 /* ViewController.swift in Sources */,
 				DBFD1CFD2070D546004B4AB2 /* AppDelegate.swift in Sources */,
+				DB841F812070DB7E004D4748 /* AppNavigator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +334,30 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		DB43F8972070D9A9008CFB7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DB43F8982070D9A9008CFB7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		DBFD1D142070D546004B4AB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -352,7 +470,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = PickMeUp/Info.plist;
+				INFOPLIST_FILE = PickMeUp/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.frallware.PickMeUp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -366,7 +484,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = PickMeUp/Info.plist;
+				INFOPLIST_FILE = PickMeUp/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.frallware.PickMeUp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -378,6 +496,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DB43F8962070D9A9008CFB7C /* Build configuration list for PBXNativeTarget "Services" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB43F8972070D9A9008CFB7C /* Debug */,
+				DB43F8982070D9A9008CFB7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DBFD1CF42070D545004B4AB2 /* Build configuration list for PBXProject "PickMeUp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

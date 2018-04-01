@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		DB016D7C2071512700505723 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB016D7B2071512700505723 /* MainViewModel.swift */; };
-		DB016D802071520D00505723 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DBECBF7E2070E7AB00EEBD32 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DB016D832071804C00505723 /* URLImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB016D822071804C00505723 /* URLImageModel.swift */; };
+		DB016D86207184EF00505723 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB016D85207184EF00505723 /* RxSwift.framework */; };
+		DB016D872071851D00505723 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB016D85207184EF00505723 /* RxSwift.framework */; };
+		DB016D892071852200505723 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DB016D85207184EF00505723 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DB43F8862070D7BA008CFB7C /* libFrallware.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB43F8822070D799008CFB7C /* libFrallware.a */; };
 		DB43F89B2070D9D1008CFB7C /* libFrallware.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB43F8822070D799008CFB7C /* libFrallware.a */; };
 		DB43F89D2070DA42008CFB7C /* AppServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB43F8992070D9BE008CFB7C /* AppServices.swift */; };
@@ -18,9 +20,6 @@
 		DB51D2A620714B220090C853 /* RedditAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51D2A520714B220090C853 /* RedditAPI.swift */; };
 		DB841F812070DB7E004D4748 /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB841F802070DB7E004D4748 /* AppNavigator.swift */; };
 		DBECBF7C2070E79200EEBD32 /* Frallware+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBECBF7B2070E79200EEBD32 /* Frallware+Rx.swift */; };
-		DBECBF7F2070E7AB00EEBD32 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBECBF7E2070E7AB00EEBD32 /* RxSwift.framework */; };
-		DBECBF80207146B800EEBD32 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBECBF7E2070E7AB00EEBD32 /* RxSwift.framework */; };
-		DBECBF81207146BE00EEBD32 /* RxSwift.framework in Resources */ = {isa = PBXBuildFile; fileRef = DBECBF7E2070E7AB00EEBD32 /* RxSwift.framework */; };
 		DBFD1CFD2070D546004B4AB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD1CFC2070D546004B4AB2 /* AppDelegate.swift */; };
 		DBFD1CFF2070D546004B4AB2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD1CFE2070D546004B4AB2 /* MainViewController.swift */; };
 		DBFD1D022070D546004B4AB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBFD1D002070D546004B4AB2 /* Main.storyboard */; };
@@ -52,7 +51,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				DB016D802071520D00505723 /* RxSwift.framework in Embed Frameworks */,
+				DB016D892071852200505723 /* RxSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,6 +70,7 @@
 /* Begin PBXFileReference section */
 		DB016D7B2071512700505723 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		DB016D822071804C00505723 /* URLImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageModel.swift; sourceTree = "<group>"; };
+		DB016D85207184EF00505723 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		DB43F87C2070D799008CFB7C /* Frallware.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Frallware.xcodeproj; sourceTree = "<group>"; };
 		DB43F8902070D9A9008CFB7C /* libServices.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libServices.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB43F8992070D9BE008CFB7C /* AppServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServices.swift; sourceTree = "<group>"; };
@@ -78,7 +78,6 @@
 		DB51D2A520714B220090C853 /* RedditAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditAPI.swift; sourceTree = "<group>"; };
 		DB841F802070DB7E004D4748 /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
 		DBECBF7B2070E79200EEBD32 /* Frallware+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Frallware+Rx.swift"; sourceTree = "<group>"; };
-		DBECBF7E2070E7AB00EEBD32 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxSwift.framework; sourceTree = "<group>"; };
 		DBFD1CF92070D546004B4AB2 /* PickMeUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickMeUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBFD1CFC2070D546004B4AB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBFD1CFE2070D546004B4AB2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -93,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBECBF7F2070E7AB00EEBD32 /* RxSwift.framework in Frameworks */,
+				DB016D86207184EF00505723 /* RxSwift.framework in Frameworks */,
 				DB43F89B2070D9D1008CFB7C /* libFrallware.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,17 +103,24 @@
 			files = (
 				DB43F89E2070DA80008CFB7C /* libServices.a in Frameworks */,
 				DB43F8862070D7BA008CFB7C /* libFrallware.a in Frameworks */,
-				DBECBF80207146B800EEBD32 /* RxSwift.framework in Frameworks */,
+				DB016D872071851D00505723 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB016D842071849C00505723 /* Carthage */ = {
+			isa = PBXGroup;
+			children = (
+				DB016D85207184EF00505723 /* RxSwift.framework */,
+			);
+			path = Carthage;
+			sourceTree = "<group>";
+		};
 		DB43F8362070D723008CFB7C /* External */ = {
 			isa = PBXGroup;
 			children = (
-				DBECBF7D2070E79C00EEBD32 /* RxSwift */,
 				DB43F87B2070D78A008CFB7C /* frallware */,
 			);
 			path = External;
@@ -209,20 +215,13 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		DBECBF7D2070E79C00EEBD32 /* RxSwift */ = {
-			isa = PBXGroup;
-			children = (
-				DBECBF7E2070E7AB00EEBD32 /* RxSwift.framework */,
-			);
-			path = RxSwift;
-			sourceTree = "<group>";
-		};
 		DBFD1CF02070D545004B4AB2 = {
 			isa = PBXGroup;
 			children = (
 				DBFD1CFB2070D546004B4AB2 /* PickMeUp */,
 				DB43F8882070D975008CFB7C /* Services */,
 				DB43F8362070D723008CFB7C /* External */,
+				DB016D842071849C00505723 /* Carthage */,
 				DBFD1CFA2070D546004B4AB2 /* Products */,
 				DB43F8852070D7BA008CFB7C /* Frameworks */,
 			);
@@ -352,7 +351,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBECBF81207146BE00EEBD32 /* RxSwift.framework in Resources */,
 				DBFD1D072070D546004B4AB2 /* LaunchScreen.storyboard in Resources */,
 				DBFD1D042070D546004B4AB2 /* Assets.xcassets in Resources */,
 				DBFD1D022070D546004B4AB2 /* Main.storyboard in Resources */,
@@ -414,6 +412,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/External/RxSwift",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -430,6 +429,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/External/RxSwift",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -557,7 +557,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/External/RxSwift",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/**",
 				);
 				INFOPLIST_FILE = PickMeUp/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -575,7 +575,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/External/RxSwift",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/**",
 				);
 				INFOPLIST_FILE = PickMeUp/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

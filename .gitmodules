@@ -1,0 +1,3 @@
+[submodule "External/frallware"]
+	path = External/frallware
+	url = git@github.com:bystam/frallware.git

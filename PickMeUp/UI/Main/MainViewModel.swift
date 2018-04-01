@@ -9,13 +9,9 @@ import RxSwift
 
 final class MainViewModel {
 
-    let feedEntries: Observable<[FeedEntry]>
-
-
-    init() {
-        let repository = Service.find(type: FeedRepository.self)
-        self.feedEntries = repository
+    let feedEntries: Observable<[FeedEntry]> = {
+        return Service.find(type: FeedRepository.self)
             .feedEntries(forSubreddits: [ "rarepuppers", "me_irl" ])
-    }
-
+            .observeOn(MainScheduler.instance)
+    }()
 }

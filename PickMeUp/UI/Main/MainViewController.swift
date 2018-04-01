@@ -29,7 +29,6 @@ class MainViewController: UIViewController, StoryboardBased {
 
     private func listenToURLs() {
         model.feedEntries
-            .observeOn(MainScheduler.instance)
             .subscribe(
                 onNext: { [weak self] entries in
                     self?.entries = entries

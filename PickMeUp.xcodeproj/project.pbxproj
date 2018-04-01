@@ -8,15 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		DB016D7C2071512700505723 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB016D7B2071512700505723 /* MainViewModel.swift */; };
-		DB016D832071804C00505723 /* URLImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB016D822071804C00505723 /* URLImageModel.swift */; };
+		DB016D832071804C00505723 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB016D822071804C00505723 /* FeedModel.swift */; };
 		DB016D86207184EF00505723 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB016D85207184EF00505723 /* RxSwift.framework */; };
 		DB016D872071851D00505723 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB016D85207184EF00505723 /* RxSwift.framework */; };
 		DB016D892071852200505723 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DB016D85207184EF00505723 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DB3034932071895800329263 /* FeedEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3034912071895800329263 /* FeedEntryCell.swift */; };
+		DB3034942071895800329263 /* FeedEntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB3034922071895800329263 /* FeedEntryCell.xib */; };
+		DB30349C2071923600329263 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB30349B2071923600329263 /* SDWebImage.framework */; };
+		DB30349D2071923F00329263 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB30349B2071923600329263 /* SDWebImage.framework */; };
+		DB30349E2071923F00329263 /* SDWebImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DB30349B2071923600329263 /* SDWebImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DB43F8862070D7BA008CFB7C /* libFrallware.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB43F8822070D799008CFB7C /* libFrallware.a */; };
 		DB43F89B2070D9D1008CFB7C /* libFrallware.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB43F8822070D799008CFB7C /* libFrallware.a */; };
 		DB43F89D2070DA42008CFB7C /* AppServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB43F8992070D9BE008CFB7C /* AppServices.swift */; };
 		DB43F89E2070DA80008CFB7C /* libServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB43F8902070D9A9008CFB7C /* libServices.a */; };
-		DB51D2A320714B060090C853 /* URLImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51D2A220714B060090C853 /* URLImageRepository.swift */; };
+		DB51D2A320714B060090C853 /* FeedRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51D2A220714B060090C853 /* FeedRepository.swift */; };
 		DB51D2A620714B220090C853 /* RedditAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51D2A520714B220090C853 /* RedditAPI.swift */; };
 		DB841F812070DB7E004D4748 /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB841F802070DB7E004D4748 /* AppNavigator.swift */; };
 		DBECBF7C2070E79200EEBD32 /* Frallware+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBECBF7B2070E79200EEBD32 /* Frallware+Rx.swift */; };
@@ -51,6 +56,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				DB30349E2071923F00329263 /* SDWebImage.framework in Embed Frameworks */,
 				DB016D892071852200505723 /* RxSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -69,12 +75,15 @@
 
 /* Begin PBXFileReference section */
 		DB016D7B2071512700505723 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		DB016D822071804C00505723 /* URLImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageModel.swift; sourceTree = "<group>"; };
+		DB016D822071804C00505723 /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
 		DB016D85207184EF00505723 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		DB3034912071895800329263 /* FeedEntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedEntryCell.swift; sourceTree = "<group>"; };
+		DB3034922071895800329263 /* FeedEntryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedEntryCell.xib; sourceTree = "<group>"; };
+		DB30349B2071923600329263 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
 		DB43F87C2070D799008CFB7C /* Frallware.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Frallware.xcodeproj; sourceTree = "<group>"; };
 		DB43F8902070D9A9008CFB7C /* libServices.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libServices.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB43F8992070D9BE008CFB7C /* AppServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServices.swift; sourceTree = "<group>"; };
-		DB51D2A220714B060090C853 /* URLImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageRepository.swift; sourceTree = "<group>"; };
+		DB51D2A220714B060090C853 /* FeedRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRepository.swift; sourceTree = "<group>"; };
 		DB51D2A520714B220090C853 /* RedditAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditAPI.swift; sourceTree = "<group>"; };
 		DB841F802070DB7E004D4748 /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
 		DBECBF7B2070E79200EEBD32 /* Frallware+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Frallware+Rx.swift"; sourceTree = "<group>"; };
@@ -93,6 +102,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB016D86207184EF00505723 /* RxSwift.framework in Frameworks */,
+				DB30349C2071923600329263 /* SDWebImage.framework in Frameworks */,
 				DB43F89B2070D9D1008CFB7C /* libFrallware.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB30349D2071923F00329263 /* SDWebImage.framework in Frameworks */,
 				DB43F89E2070DA80008CFB7C /* libServices.a in Frameworks */,
 				DB43F8862070D7BA008CFB7C /* libFrallware.a in Frameworks */,
 				DB016D872071851D00505723 /* RxSwift.framework in Frameworks */,
@@ -113,6 +124,7 @@
 		DB016D842071849C00505723 /* Carthage */ = {
 			isa = PBXGroup;
 			children = (
+				DB30349B2071923600329263 /* SDWebImage.framework */,
 				DB016D85207184EF00505723 /* RxSwift.framework */,
 			);
 			path = Carthage;
@@ -155,7 +167,7 @@
 			children = (
 				DB43F8992070D9BE008CFB7C /* AppServices.swift */,
 				DB51D2A420714B170090C853 /* RedditAPI */,
-				DB51D29F20714AD60090C853 /* URLImageRepository */,
+				DB51D29F20714AD60090C853 /* FeedRepository */,
 				DBECBF7A2070E78300EEBD32 /* Utils */,
 			);
 			path = Services;
@@ -165,8 +177,8 @@
 			isa = PBXGroup;
 			children = (
 				DB841F802070DB7E004D4748 /* AppNavigator.swift */,
-				DB841F822070DBD9004D4748 /* Main */,
 				DBFD1D032070D546004B4AB2 /* Assets.xcassets */,
+				DB841F822070DBD9004D4748 /* Main */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -180,13 +192,13 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		DB51D29F20714AD60090C853 /* URLImageRepository */ = {
+		DB51D29F20714AD60090C853 /* FeedRepository */ = {
 			isa = PBXGroup;
 			children = (
-				DB016D822071804C00505723 /* URLImageModel.swift */,
-				DB51D2A220714B060090C853 /* URLImageRepository.swift */,
+				DB016D822071804C00505723 /* FeedModel.swift */,
+				DB51D2A220714B060090C853 /* FeedRepository.swift */,
 			);
-			path = URLImageRepository;
+			path = FeedRepository;
 			sourceTree = "<group>";
 		};
 		DB51D2A420714B170090C853 /* RedditAPI */ = {
@@ -200,9 +212,11 @@
 		DB841F822070DBD9004D4748 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				DBFD1D002070D546004B4AB2 /* Main.storyboard */,
 				DB016D7B2071512700505723 /* MainViewModel.swift */,
 				DBFD1CFE2070D546004B4AB2 /* MainViewController.swift */,
-				DBFD1D002070D546004B4AB2 /* Main.storyboard */,
+				DB3034912071895800329263 /* FeedEntryCell.swift */,
+				DB3034922071895800329263 /* FeedEntryCell.xib */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -351,6 +365,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB3034942071895800329263 /* FeedEntryCell.xib in Resources */,
 				DBFD1D072070D546004B4AB2 /* LaunchScreen.storyboard in Resources */,
 				DBFD1D042070D546004B4AB2 /* Assets.xcassets in Resources */,
 				DBFD1D022070D546004B4AB2 /* Main.storyboard in Resources */,
@@ -366,9 +381,9 @@
 			files = (
 				DB51D2A620714B220090C853 /* RedditAPI.swift in Sources */,
 				DBECBF7C2070E79200EEBD32 /* Frallware+Rx.swift in Sources */,
-				DB51D2A320714B060090C853 /* URLImageRepository.swift in Sources */,
+				DB51D2A320714B060090C853 /* FeedRepository.swift in Sources */,
 				DB43F89D2070DA42008CFB7C /* AppServices.swift in Sources */,
-				DB016D832071804C00505723 /* URLImageModel.swift in Sources */,
+				DB016D832071804C00505723 /* FeedModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +395,7 @@
 				DBFD1CFD2070D546004B4AB2 /* AppDelegate.swift in Sources */,
 				DB841F812070DB7E004D4748 /* AppNavigator.swift in Sources */,
 				DB016D7C2071512700505723 /* MainViewModel.swift in Sources */,
+				DB3034932071895800329263 /* FeedEntryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,6 +574,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS/**",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = PickMeUp/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -576,6 +593,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS/**",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = PickMeUp/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

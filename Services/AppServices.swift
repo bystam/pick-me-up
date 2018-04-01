@@ -10,7 +10,7 @@ public final class AppServices {
     private var services: [String : Any] = [:]
 
     public init() {
-        add(service: _URLImageRepository(), ofType: URLImageRepository.self)
+        add(service: _FeedRepository(), ofType: FeedRepository.self)
     }
 
     private func add<S>(service: S, ofType type: S.Type) {

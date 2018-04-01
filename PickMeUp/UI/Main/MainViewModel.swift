@@ -2,20 +2,20 @@
 //  Copyright © 2018 Frallware. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import Services
 import Frallware
 import RxSwift
 
 final class MainViewModel {
 
-    let images: Observable<[URL]>
+    let feedEntries: Observable<[FeedEntry]>
+
 
     init() {
-        let repository = Service.find(type: URLImageRepository.self)
-        self.images = repository
-            .imageURLs(forSubreddits: [ "rarepuppers", "me_irl" ])
-            .map { urls in Array(urls.prefix(4)) }
+        let repository = Service.find(type: FeedRepository.self)
+        self.feedEntries = repository
+            .feedEntries(forSubreddits: [ "rarepuppers", "me_irl" ])
     }
 
 }

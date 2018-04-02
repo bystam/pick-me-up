@@ -16,24 +16,24 @@ final class FeedViewModel {
 
     init() {
 
-        let remoteFetchTrigger = PublishSubject<Void>()
-
         let localEntries = BehaviorSubject<[FeedEntry]>(value: [])
         self.localEntries = localEntries
 
+        // trigger once first, then every time there's only 2 left
+        let remoteFetchTrigger = localEntries
+            .filter { $0.count == 2 }
+            .map { _ in () }
+            .startWith(())
+
+        // fetch new entries, cache in localEntries, but never emit
         let repository = Service.find(type: FeedRepository.self)
-        let remoteEntries = Observable.concat(Observable.just(()), remoteFetchTrigger)
+        let remoteEntries = remoteFetchTrigger
             .flatMap { _ in repository.feedEntries(forSubreddits: ["rarepuppers"]) }
             .do(onNext: localEntries.append)
+            .filter { _ in false }
 
-        let totalEntries = Observable.combineLatest(localEntries, remoteEntries, resultSelector: { (local, _) -> [FeedEntry] in
-                return local
-            })
-            .do(onNext: { local in
-                if local.count <= 2 {
-                    remoteFetchTrigger.onNext(())
-                }
-            })
+        // only use localEntries, but make sure remoteEntries are subscribed to
+        let totalEntries = Observable.merge(localEntries, remoteEntries)
             .share(replay: 1)
             .observeOn(MainScheduler.instance)
 

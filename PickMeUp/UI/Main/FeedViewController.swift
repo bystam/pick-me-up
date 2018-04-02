@@ -33,17 +33,17 @@ class FeedViewController: UIViewController, StoryboardBased {
 
         pageView.currentPageAction = { [weak self] page in
             guard page > 0 else { return }
-            self?.model.incrementPage()
+            self?.model.nextPage()
             self?.pageView.scrollToPage(index: 0)
         }
     }
 
     private func listenToModelChanges() {
         model.currentEntry.subscribe(onNext: { [weak self] entry in
-            self?.currentPage.sd_setImage(with: entry?.image.url)
+            self?.currentPage.sd_setImage(with: entry.image.url)
         }).disposed(by: bag)
         model.nextEntry.subscribe(onNext: { [weak self] entry in
-            self?.nextPage.sd_setImage(with: entry?.image.url)
+            self?.nextPage.sd_setImage(with: entry.image.url)
         }).disposed(by: bag)
     }
 }

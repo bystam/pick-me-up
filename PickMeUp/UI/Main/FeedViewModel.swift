@@ -11,8 +11,8 @@ final class FeedViewModel {
 
     private let localEntries: BehaviorSubject<[FeedEntry]>
 
-    let currentEntry: Observable<FeedEntry?>
-    let nextEntry: Observable<FeedEntry?>
+    let currentEntry: Observable<FeedEntry>
+    let nextEntry: Observable<FeedEntry>
 
     init() {
 
@@ -25,7 +25,8 @@ final class FeedViewModel {
             .map { _ in () }
             .startWith(())
 
-        // fetch new entries, cache in localEntries, but never emit
+        // fetch new entries, cache in localEntries
+        // but never emit, since it would be duplicate a from localEntries
         let repository = Service.find(type: FeedRepository.self)
         let remoteEntries = remoteFetchTrigger
             .flatMap { _ in repository.feedEntries(forSubreddits: ["rarepuppers"]) }
@@ -37,20 +38,19 @@ final class FeedViewModel {
             .share(replay: 1)
             .observeOn(MainScheduler.instance)
 
-        currentEntry = totalEntries.map { entries in
-            return entries.first
-        }
-        nextEntry = totalEntries.map { entries in
-            guard entries.count >= 2 else { return nil }
-            return entries[1]
-        }
+        currentEntry = totalEntries
+            .filter { $0.count >= 1 }
+            .map { $0[0] }
+        nextEntry = totalEntries
+            .filter { $0.count >= 2 }
+            .map { $0[1] }
     }
 }
 
 extension FeedViewModel {
 
-    func incrementPage() {
-        self.localEntries.removeFirst()
+    func nextPage() {
+        localEntries.removeFirst()
     }
 }
 

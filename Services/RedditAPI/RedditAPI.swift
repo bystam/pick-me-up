@@ -59,6 +59,6 @@ public extension ListingsCall {
 private extension ListingsCall.Listing {
 
     func url(subreddit: String) -> URL {
-        return URL(string: "https://api.reddit.com/r/\(subreddit)/\(rawValue)?raw_json=1")!
+        return URL(string: "https://api.reddit.com/r/\(subreddit)/\(rawValue)?raw_json=1&limit=2")!
     }
 }

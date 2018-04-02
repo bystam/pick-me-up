@@ -17,7 +17,7 @@ public class _FeedRepository: FeedRepository {
 
     private let client: NetworkClient
 
-    public init(client: NetworkClient = StandardNetworkClient()) {
+    public init(client: NetworkClient) {
         self.client = client
     }
 

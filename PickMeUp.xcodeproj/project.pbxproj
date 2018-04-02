@@ -12,11 +12,10 @@
 		DB016D86207184EF00505723 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB016D85207184EF00505723 /* RxSwift.framework */; };
 		DB016D872071851D00505723 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB016D85207184EF00505723 /* RxSwift.framework */; };
 		DB016D892071852200505723 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DB016D85207184EF00505723 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DB3034932071895800329263 /* FeedEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3034912071895800329263 /* FeedEntryCell.swift */; };
-		DB3034942071895800329263 /* FeedEntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB3034922071895800329263 /* FeedEntryCell.xib */; };
 		DB30349C2071923600329263 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB30349B2071923600329263 /* SDWebImage.framework */; };
 		DB30349D2071923F00329263 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB30349B2071923600329263 /* SDWebImage.framework */; };
 		DB30349E2071923F00329263 /* SDWebImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DB30349B2071923600329263 /* SDWebImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DB3034A02072983E00329263 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB30349F2072983E00329263 /* PageView.swift */; };
 		DB43F8862070D7BA008CFB7C /* libFrallware.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB43F8822070D799008CFB7C /* libFrallware.a */; };
 		DB43F89B2070D9D1008CFB7C /* libFrallware.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB43F8822070D799008CFB7C /* libFrallware.a */; };
 		DB43F89D2070DA42008CFB7C /* AppServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB43F8992070D9BE008CFB7C /* AppServices.swift */; };
@@ -77,9 +76,8 @@
 		DB016D7B2071512700505723 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		DB016D822071804C00505723 /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
 		DB016D85207184EF00505723 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
-		DB3034912071895800329263 /* FeedEntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedEntryCell.swift; sourceTree = "<group>"; };
-		DB3034922071895800329263 /* FeedEntryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedEntryCell.xib; sourceTree = "<group>"; };
 		DB30349B2071923600329263 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
+		DB30349F2072983E00329263 /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
 		DB43F87C2070D799008CFB7C /* Frallware.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Frallware.xcodeproj; sourceTree = "<group>"; };
 		DB43F8902070D9A9008CFB7C /* libServices.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libServices.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB43F8992070D9BE008CFB7C /* AppServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServices.swift; sourceTree = "<group>"; };
@@ -215,8 +213,7 @@
 				DBFD1D002070D546004B4AB2 /* Main.storyboard */,
 				DB016D7B2071512700505723 /* MainViewModel.swift */,
 				DBFD1CFE2070D546004B4AB2 /* MainViewController.swift */,
-				DB3034912071895800329263 /* FeedEntryCell.swift */,
-				DB3034922071895800329263 /* FeedEntryCell.xib */,
+				DB30349F2072983E00329263 /* PageView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -365,7 +362,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB3034942071895800329263 /* FeedEntryCell.xib in Resources */,
 				DBFD1D072070D546004B4AB2 /* LaunchScreen.storyboard in Resources */,
 				DBFD1D042070D546004B4AB2 /* Assets.xcassets in Resources */,
 				DBFD1D022070D546004B4AB2 /* Main.storyboard in Resources */,
@@ -392,10 +388,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBFD1CFF2070D546004B4AB2 /* MainViewController.swift in Sources */,
+				DB3034A02072983E00329263 /* PageView.swift in Sources */,
 				DBFD1CFD2070D546004B4AB2 /* AppDelegate.swift in Sources */,
 				DB841F812070DB7E004D4748 /* AppNavigator.swift in Sources */,
 				DB016D7C2071512700505723 /* MainViewModel.swift in Sources */,
-				DB3034932071895800329263 /* FeedEntryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

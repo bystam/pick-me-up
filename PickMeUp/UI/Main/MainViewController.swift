@@ -13,51 +13,36 @@ class MainViewController: UIViewController, StoryboardBased {
 
     private let model = MainViewModel()
     private let bag = DisposeBag()
-    private var entries: [FeedEntry] = []
 
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var pageView: PageView!
+    private let page1 = UIView()
+    private let page2 = UIView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        FeedEntryCell.registerAsNib(in: tableView)
-        tableView.dataSource = self
-        tableView.delegate = self
-
-        listenToURLs()
+        setupPages()
+        listenToModelChanges()
     }
 
-    private func listenToURLs() {
-        model.feedEntries
-            .subscribe(
-                onNext: { [weak self] entries in
-                    self?.entries = entries
-                    self?.tableView.reloadData()
-                },
-                onError: { error in
-                    print(error)
-            })
-            .disposed(by: bag)
-    }
-}
+    private func setupPages() {
+        page1.backgroundColor = .red
+        page2.backgroundColor = .blue
+        [page1, page2].forEach(pageView.addPage)
 
-extension MainViewController: UITableViewDataSource {
-
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        pageView.currentPageAction = { [weak self] page in
+            guard page > 0 else { return }
+            self?.model.incrementPage()
+            self?.pageView.scrollToPage(index: 0)
+        }
     }
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return entries.count
+    private func listenToModelChanges() {
+        model.page1Color.subscribe(onNext: { [weak self] color in
+            self?.page1.backgroundColor = color
+        }).disposed(by: bag)
+        model.page2Color.subscribe(onNext: { [weak self] color in
+            self?.page2.backgroundColor = color
+        }).disposed(by: bag)
     }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView
-            .dequeueCell(type: FeedEntryCell.self, at: indexPath)
-            .configure(entry: entries[indexPath.row])
-    }
-}
-
-extension MainViewController: UITableViewDelegate {
-
 }

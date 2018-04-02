@@ -18,22 +18,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ngh-GL-i6y">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Is3-Gb-u53" customClass="PageView" customModule="PickMeUp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableView>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ngh-GL-i6y" secondAttribute="trailing" id="8RD-FA-Su3"/>
-                            <constraint firstAttribute="bottom" secondItem="ngh-GL-i6y" secondAttribute="bottom" id="B02-MT-OVO"/>
-                            <constraint firstItem="ngh-GL-i6y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YQe-Rk-Nso"/>
-                            <constraint firstItem="ngh-GL-i6y" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qcK-co-nQ6"/>
+                            <constraint firstItem="Is3-Gb-u53" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="85o-vj-a87"/>
+                            <constraint firstItem="Is3-Gb-u53" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OrJ-Hb-415"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Is3-Gb-u53" secondAttribute="trailing" id="aSB-fP-7FV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Is3-Gb-u53" secondAttribute="bottom" id="hfV-yU-sSs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="ngh-GL-i6y" id="PzX-Ta-Ja9"/>
+                        <outlet property="pageView" destination="Is3-Gb-u53" id="60Z-Dx-yJN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

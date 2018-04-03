@@ -16,8 +16,8 @@ class FeedViewController: UIViewController, StoryboardBased {
     private let bag = DisposeBag()
 
     @IBOutlet private weak var pageView: PageView!
-    private let currentPage = UIImageView()
-    private let nextPage = UIImageView()
+    private let currentImageView = UIImageView()
+    private let nextImageView = UIImageView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,23 +27,28 @@ class FeedViewController: UIViewController, StoryboardBased {
     }
 
     private func setupPages() {
-        currentPage.contentMode = .scaleAspectFit
-        nextPage.contentMode = .scaleAspectFit
-        [currentPage, nextPage].forEach(pageView.addPage)
+        currentImageView.contentMode = .scaleAspectFit
+        nextImageView.contentMode = .scaleAspectFit
 
-        pageView.currentPageAction = { [weak self] page in
-            guard page > 0 else { return }
+        var constraints: [NSLayoutConstraint] = []
+        zip([pageView.firstView, pageView.secondView], [currentImageView, nextImageView]).forEach { (container, view) in
+            container.addSubview(view)
+            view.translatesAutoresizingMaskIntoConstraints = false
+            constraints.append(contentsOf: NSLayoutConstraint.fill(view, inside: container))
+        }
+        NSLayoutConstraint.activate(constraints)
+
+        pageView.pageChangeAction = { [weak self] in
             self?.model.nextPage()
-            self?.pageView.scrollToPage(index: 0)
         }
     }
 
     private func listenToModelChanges() {
         model.currentEntry.subscribe(onNext: { [weak self] entry in
-            self?.currentPage.sd_setImage(with: entry.image.url)
+            self?.currentImageView.sd_setImage(with: entry.image.url)
         }).disposed(by: bag)
         model.nextEntry.subscribe(onNext: { [weak self] entry in
-            self?.nextPage.sd_setImage(with: entry.image.url)
+            self?.nextImageView.sd_setImage(with: entry.image.url)
         }).disposed(by: bag)
     }
 }

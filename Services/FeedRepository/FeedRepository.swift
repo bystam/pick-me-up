@@ -23,10 +23,10 @@ public class _FeedRepository: FeedRepository {
 
     public func feedEntries(forSubreddits subreddits: [String]) -> Observable<[FeedEntry]> {
         let client = self.client
-        let subbredditObservables = subreddits.map(Observable.just)
+        let subredditObservables = subreddits.map(Observable.just)
 
         return Observable
-            .merge(subbredditObservables)
+            .merge(subredditObservables)
             .map { ListingsCall(subreddit: $0, listing: .hot) }
             .flatMap { call in client.request(call).asSingle() }
             .map { response in

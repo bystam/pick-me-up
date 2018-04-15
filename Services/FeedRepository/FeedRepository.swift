@@ -30,7 +30,7 @@ public class _FeedRepository: FeedRepository {
             .map { ListingsCall(subreddit: $0, listing: .hot) }
             .flatMap { call in client.request(call).asSingle() }
             .map { response in
-                return response.data.children.compactMap(FeedEntry.init)
+                return response.body.data.children.compactMap(FeedEntry.init)
             }
             .reduce([FeedEntry](), accumulator: +)
     }

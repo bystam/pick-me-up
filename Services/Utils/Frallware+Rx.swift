@@ -11,13 +11,14 @@ public extension NetworkTask {
     public func asSingle() -> Single<T> {
         return Single.create(subscribe: { handler -> Disposable in
 
-            self.onResponse { value in
-                    handler(.success(value))
-                }
-                .onError { error in
+            self.onResult { result in
+                switch result {
+                case .success(let response):
+                    handler(.success(response))
+                case .failure(let error):
                     handler(.error(error))
                 }
-                .start()
+            }.start()
 
             return Disposables.create {
                 self.cancel()
@@ -31,13 +32,14 @@ public extension NetworkTask where T == Void {
     public func asCompletable() -> Completable {
         return Completable.create(subscribe: { handler -> Disposable in
 
-            self.onSuccess {
+            self.onResult { result in
+                switch result {
+                case .success(_):
                     handler(.completed)
-                }
-                .onError { error in
+                case .failure(let error):
                     handler(.error(error))
                 }
-                .start()
+            }.start()
 
             return Disposables.create {
                 self.cancel()
